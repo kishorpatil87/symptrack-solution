@@ -41,7 +41,7 @@ export const Header = () => {
             <Button 
               variant="ghost" 
               onClick={() => navigate("/login")}
-              className="text-white border border-white/20 hover:bg-white/10"
+              className="bg-primary hover:bg-primary/90 text-white"
             >
               Sign In
             </Button>
