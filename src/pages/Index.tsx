@@ -37,15 +37,15 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 animate-fadeIn">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fadeIn">
             Smart Health Diagnosis Assistant
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fadeIn">
+          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fadeIn">
             Track your symptoms, get preliminary diagnoses, and connect with
             specialists near you.
           </p>
@@ -53,7 +53,7 @@ const Index = () => {
             <Button
               size="lg"
               onClick={() => navigate("/symptoms")}
-              className="group"
+              className="bg-primary hover:bg-primary/90 text-white group"
             >
               Check Symptoms
               <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
@@ -62,6 +62,7 @@ const Index = () => {
               size="lg"
               variant="outline"
               onClick={() => navigate("/register")}
+              className="border-white/20 text-white hover:bg-white/10"
             >
               Create Account
             </Button>
@@ -74,16 +75,16 @@ const Index = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="p-6 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow animate-fadeIn"
+                className="p-6 glass-morphism rounded-lg hover:bg-white/10 transition-all duration-300 animate-fadeIn"
                 style={{
                   animationDelay: `${index * 100}ms`,
                 }}
               >
                 <feature.icon className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <p className="text-white/80">{feature.description}</p>
               </div>
             ))}
           </div>
